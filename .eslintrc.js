@@ -41,9 +41,7 @@ module.exports = {
             tryExtensions: [".js", ".json", ".node", ".ts"],
           },
         ],
-        "import/no-unresolved": [
-          "warn"
-        ],
+        "import/no-unresolved": ["warn"],
       },
     },
     {
@@ -63,7 +61,11 @@ module.exports = {
         "node/no-unsupported-features/es-syntax": "off",
         "@typescript-eslint/no-unused-vars": "warn",
         "@typescript-eslint/no-explicit-any": "warn",
-        "no-console": "error"
+        "import/no-extraneous-dependencies": [
+          "error",
+          { devDependencies: true },
+        ],
+        "no-console": "error",
       },
     },
   ],
